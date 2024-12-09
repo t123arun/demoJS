@@ -39,3 +39,58 @@ async function fetchAndDisplayData(){
 }
 
 fetchAndDisplayData();
+
+//second objective
+
+//objective-2
+document.getElementById('objective-2').innerHTML = "Fetching and displaying data from API that incorporates many important JS topics. like Async/Await, Fetch API , Error Handling , DOM Manipulation , Template Literals , Event Listeners , Dynamic Data Updates , Destructuring , Modules (optional)";
+
+
+//select DOM elements
+const dataList2 = document.getElementById('data-list-2');
+const fetchDataBtn = document.getElementById('fetch-data-btn');
+
+//define an async function to fetch and display data
+
+const fetchAndDisplayData2 = async () => {
+    try{
+        //Clear an existing data
+        dataList2.innerHTML = '';
+
+        //Fetch data from the API
+        const response = await fetch('https://jsonplaceholder.typicode.com/posts');
+
+        //Handle non-200 response
+        if(!response.ok){
+            throw new Error(`HTTP error! Status : ${response.status}`);
+        }
+
+        //parse the json response
+        const data2 = await response.json();
+
+        //slice to limit the number of items displayed first 10 items
+        const limitedData = data2.slice(0,10);
+
+        limitedData.forEach(({id,title,body})=>{
+            //create a card element
+            const listItem2 = document.createElement('li');
+            listItem2.classList.add('card');
+
+            //use template literals for dynamic content
+            listItem2.innerHTML = `<h4>ID : ${id}</h4> <p> TITLE : ${title}</p> <p>BODY : ${body}</p>`;
+
+            //append the card to the list
+            dataList2.appendChild(listItem2);
+        });
+
+    }catch(error){
+        //display error message
+        console.error('Error fetching data: ',error);
+        const errorItem = document.createElement('li');
+        errorItem.classList.add('card');
+        errorItem.textContent = 'Failed to load data. Please try again.';
+        dataList2.appendChild(errorItem);
+    }
+}
+
+fetchDataBtn.addEventListener('click', fetchAndDisplayData2);

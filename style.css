@@ -31,14 +31,33 @@ h1,h2,h3,h4,h5,h6,p,li{
   text-transform: uppercase;
   letter-spacing: 2px;
   padding: 20px;
-  border-bottom: 1px dotted var(--text-color);
+  display: inline;
 }
 .error-text{
     color: var(--error-text);
 }
+summary::marker {
+  color: var(--text-color);
+  font-size: 1.2em;
+}
 
+summary {
+  background-color: var(--secondary-blue);
+  color: var(--text-color);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+details[open] summary {border-radius: 5px 5px 0 0;}
+
+details {
+  background: var(--secondary-blue);
+  border-radius: 5px;
+  margin: 20px;
+  border: 1px dotted var(--text-color);
+}
 ul{
-  list-style-type: square;
+  list-style-type: none;
   padding: 50px;
 }
 li{
@@ -80,4 +99,18 @@ li{
   font-weight: 900;
   font-style: normal;
 }
-
+.card {
+  background: var(--light-blue);
+  margin: 10px 0;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+.card h4 {
+  margin: 0 0 5px;
+}
+button {
+  padding: 10px 15px;
+  font-size: 16px;
+  margin: 20px;
+}
