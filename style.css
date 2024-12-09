@@ -112,5 +112,44 @@ li{
 button {
   padding: 10px 15px;
   font-size: 16px;
-  margin: 20px;
+  margin: 10px;
+  background-color: var(--text-color); /* Green */
+  border: none;
+  color: var(--primary-blue);
+  padding: 15px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 8px;
+  border: 2px dotted var(--text-color);
+  text-transform: uppercase;
+}
+button:hover{
+  background-color: var(--primary-blue);
+  color: var(--text-color);
+  transition: all ease-in-out 300ms;
+}
+input[type=text] {
+  width: 60%;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-image: url('searchicon.png');
+  background-position: 10px 10px; 
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+}
+form{
+  display: inline-block;
+  border: 1px dotted var(--text-color);
+  padding : 0 10px
+}
+.flex{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
 }
