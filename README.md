@@ -1,4 +1,4 @@
-# demoJS
+# Personal Task Manager
 Learn and Practice JS Code
 
 OBJECTIVE COVERED !!
