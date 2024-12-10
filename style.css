@@ -1,8 +1,8 @@
 :root{
-    --primary-blue : #17153B;
-    --secondary-blue : #2E236C;
+    --primary-blue : #F8FAFC;
+    --secondary-blue : #D9EAFD;
     --light-blue : #433D8B;
-    --text-color : #FDF7F4;
+    --text-color : #9AA6B2;
     --error-text : red;
 }
 
@@ -81,3 +81,6 @@ li{
   font-style: normal;
 }
 
+.main-heading{
+  text-transform: uppercase;
+}
