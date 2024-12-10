@@ -21,3 +21,5 @@ Topics Included:
 9. Modularity (Optional): If required, you can wrap this code in ES6 modules.
 
 1.3 Enhancements : PAGINATION, SEARCH BAR , LOADING INDICATOR , MODULAR CODE. 
+
+1.4 Advanced API CRUD with Lazy Loading.
