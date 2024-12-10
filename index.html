@@ -30,16 +30,18 @@
         <div class="flex">
             <button id="fetch-data-btn2">Fetch Data</button>
             <form action="">
-                <input type="text" name="search" id="searchData">
-                <button type="submit">Search</button>
+                <img src="./assets/favicon.svg" alt="Search Icon" width="20" height="20">
+                <input type="text" name="search" id="search-input" placeholder="Search posts...">
             </form>
             <div>
-                <button id="prev">PREV</button>
-                <button id="nex">NEXT</button>
+                <button id="prev-btn">PREV</button>
+                <button id="next-btn">NEXT</button>
             </div>
         </div>
+        <p class="loading" id="loading-indicator">Loading<span class="blink">...</span></p>
         <ul id="data-list-3"></ul>
     </details>
-    <script src="main.js"></script>
+    <script type="module" src="./js/app.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 </html>

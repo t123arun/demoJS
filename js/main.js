@@ -1,3 +1,4 @@
+
 //CODE
 console.log("-----DEMO JS-----");
 
@@ -98,51 +99,5 @@ fetchDataBtn.addEventListener('click', fetchAndDisplayData2);
 //objective-3
 document.getElementById('objective-1.3').innerHTML = "Enhancements : PAGINATION, SEARCH BAR , LOADING INDICATOR , MODULAR CODE";
 
-//select DOM elements
-const dataList3 = document.getElementById('data-list-3');
-const fetchDataBtn2 = document.getElementById('fetch-data-btn2');
+//importing app file from js folder
 
-//define an async function to fetch and display data
-
-const fetchAndDisplayData3 = async () => {
-    try{
-        //Clear an existing data
-        dataList3.innerHTML = '';
-
-        //Fetch data from the API
-        const response = await fetch('https://jsonplaceholder.typicode.com/posts');
-
-        //Handle non-200 response
-        if(!response.ok){
-            throw new Error(`HTTP error! Status : ${response.status}`);
-        }
-
-        //parse the json response
-        const data3 = await response.json();
-
-        //slice to limit the number of items displayed first 10 items
-        const limitedData = data3.slice(0,10);
-
-        limitedData.forEach(({id,title,body})=>{
-            //create a card element
-            const listItem3 = document.createElement('li');
-            listItem3.classList.add('card');
-
-            //use template literals for dynamic content
-            listItem3.innerHTML = `<h4>ID : ${id}</h4> <p> TITLE : ${title}</p> <p>BODY : ${body}</p>`;
-
-            //append the card to the list
-            dataList3.appendChild(listItem3);
-        });
-
-    }catch(error){
-        //display error message
-        console.error('Error fetching data: ',error);
-        const errorItem = document.createElement('li');
-        errorItem.classList.add('card');
-        errorItem.textContent = 'Failed to load data. Please try again.';
-        dataList2.appendChild(errorItem);
-    }
-}
-
-fetchDataBtn2.addEventListener('click', fetchAndDisplayData3);
