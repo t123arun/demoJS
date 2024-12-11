@@ -9,12 +9,30 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 <body class="roboto-regular">
-    <h1 class="main-heading roboto-light">Personal Task Manager</h1>
-    <h2 id="objective" class="secondary-heading"></h2>
-    <ul id="data-list" class="roboto-thin">
-        
-    </ul>
-
+    <header>
+        <h1 class="main-heading roboto-light">Personal Task Manager</h1>
+        <h2 id="objective" class="secondary-heading"></h2>
+        <button id="theme-toggle">Toggle Dark/Light Mode</button>
+    </header>
+    <main>
+        <section id="task-form">
+            <h3>Add a Task</h3>
+            <input type="text" id="task-title" placeholder="Task Title">
+            <input type="date" id="task-date">
+            <input type="text" id="task-category" placeholder="Category">
+            <button id="add-task">Add Task</button>
+            <span class="divider"></span>
+        </section>
+        <section id="task-list">
+            <h3>Tasks</h3>
+            <div id="filters">
+                <button data-filter="all">All</button>
+                <button data-filter="completed">Completed</button>
+                <button data-filter="pending">Pending</button>
+            </div>
+            <ul id="tasks"></ul>
+        </section>
+    </main>
     <script src="main.js"></script>
 </body>
 </html>

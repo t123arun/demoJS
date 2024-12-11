@@ -4,6 +4,7 @@
     --light-blue : #433D8B;
     --text-color : #9AA6B2;
     --error-text : red;
+    --secondary-green : #009990;
 }
 
 *{
@@ -17,7 +18,8 @@ body {
 }
 
 h1,h2,h3,h4,h5,h6,p,li{
-    color: var(--text-color);
+    color: var(--secondary-green);
+    text-transform: uppercase;
 }
 .main-heading{
   background-color: var(--secondary-blue);
@@ -25,6 +27,7 @@ h1,h2,h3,h4,h5,h6,p,li{
   margin-bottom: 20px;
   padding: 10px 20px;
   font-size: 12px;
+  color: var(--secondary-green);
 }
 .secondary-heading{
   font-size: 12px;
@@ -83,4 +86,62 @@ li{
 
 .main-heading{
   text-transform: uppercase;
+}
+
+header{
+  background-color: #D9EAFD;
+  text-align: center;
+}
+button {
+  all: unset;
+  background: var(--secondary-green);
+  padding: 10px 15px;
+  border-radius: 8px;
+  color: white;
+  margin: 20px;
+  cursor: pointer;
+  border: 2px solid var(--secondary-green);
+  transition: all 300ms ease-in-out;
+}
+button:hover{
+  background-color: white;
+  color: var(--secondary-green);
+}
+
+main{
+  padding: 20px;
+  text-align: center;
+}
+input[type="text"],
+input[type="date"]{
+  all: unset;
+  border: 1px solid var(--secondary-blue);
+  padding: 10px 20px;
+  color: var(--secondary-green);
+}
+input[type="text"]::placeholder{
+  color: var(--text-color);
+}
+span.divider{
+  display: block;
+  width: 500px;
+  margin: 20px auto;
+  border: 1px dotted var(--text-color);
+}
+#task-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+#task-list li {
+  border: 1px solid #ccc;
+  padding: 1em;
+  margin-bottom: 1em;
+  display: flex;
+  justify-content: space-between;
+}
+
+.dark-mode{
+  background-color: var(--text-color);
+  color: white;
 }
